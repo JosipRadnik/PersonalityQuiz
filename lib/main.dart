@@ -88,13 +88,14 @@ class _MyAppState extends State<MyApp> {
           title: Text('Personality Quiz'),
         ),
         body: _questionIndex < _questions.length
-            ? Quiz(
-                answerQuestion: _answerQuestion,
-                questionIndex: _questionIndex,
-                questions: _questions,
-              )
-            : Result(_totalScore, _resetQuiz),
+        ? Quiz(
+          answerQuestion: _answerQuestion,
+          questionIndex: _questionIndex,
+          questions: _questions,
+        )
+        : Result(_totalScore, _resetQuiz),
       ),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
